@@ -1,0 +1,300 @@
+$date
+   Wed Apr 26 09:52:44 2023
+$end
+$version
+  2022.2
+$end
+$timescale
+  1ps
+$end
+$scope module conv_tb $end
+$var reg 1 ! clk $end
+$scope module if_ $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$var reg 18 $ data_in [17:0] $end
+$var reg 1 % i_valid $end
+$var reg 1 & i_ready $end
+$var reg 18 ' out [17:0] $end
+$var reg 1 ( o_valid $end
+$upscope $end
+$scope module u_conv $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var wire 18 + data_in [17:0] $end
+$var wire 1 , i_valid $end
+$var wire 1 - i_ready $end
+$var wire 18 . out [17:0] $end
+$var wire 1 / o_valid $end
+$var reg 1 0 line_buf_en $end
+$var reg 9 1 pixel_count [8:0] $end
+$var reg 29 2 row_count [28:0] $end
+$var reg 29 3 col_count [28:0] $end
+$var reg 1 4 valid_q [0:0] $end
+$var reg 18 5 temp_val [17:0] $end
+$var wire 1 6 valid_d $end
+$scope module u0_tapped_shift_reg $end
+$var wire 1 ) clk $end
+$var wire 18 7 in [17:0] $end
+$var wire 90 8 out [89:0] $end
+$var reg 504 9 registers [503:0] $end
+$scope begin Block17_19 $end
+$var reg 32 : i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module line_buf_gen[1].u_tapped_shift_reg $end
+$var wire 1 ) clk $end
+$var wire 18 ; in [17:0] $end
+$var wire 90 < out [89:0] $end
+$var reg 504 = registers [503:0] $end
+$scope begin Block17_19 $end
+$var reg 32 > i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module line_buf_gen[2].u_tapped_shift_reg $end
+$var wire 1 ) clk $end
+$var wire 18 ? in [17:0] $end
+$var wire 90 @ out [89:0] $end
+$var reg 504 A registers [503:0] $end
+$scope begin Block17_19 $end
+$var reg 32 B i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module line_buf_gen[3].u_tapped_shift_reg $end
+$var wire 1 ) clk $end
+$var wire 18 C in [17:0] $end
+$var wire 90 D out [89:0] $end
+$var reg 504 E registers [503:0] $end
+$scope begin Block17_19 $end
+$var reg 32 F i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module line_buf_gen[4].u_tapped_shift_reg $end
+$var wire 1 ) clk $end
+$var wire 18 G in [17:0] $end
+$var wire 90 H out [89:0] $end
+$var reg 504 I registers [503:0] $end
+$scope begin Block17_19 $end
+$var reg 32 J i [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin kernel_calc $end
+$scope begin Block77_25 $end
+$var reg 32 K i [31:0] $end
+$scope begin Block78_26 $end
+$var reg 32 L j [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin Block211_29 $end
+$var reg 32 M t $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+1#
+bx $
+0%
+1&
+bx '
+x(
+0)
+1*
+bx +
+0,
+1-
+bx .
+x/
+x0
+bx 1
+bx 2
+bx 3
+x4
+bx 5
+x6
+bx 7
+bx 8
+bx 9
+b0 :
+bx ;
+bx <
+bx =
+b0 >
+bx ?
+bx @
+bx A
+b0 B
+bx C
+bx D
+bx E
+b0 F
+bx G
+bx H
+bx I
+b0 J
+b101 K
+b101 L
+b0 M
+$end
+#10000
+1!
+1"
+1)
+b0 1
+b0 2
+b0 3
+06
+bx 9
+b11100 :
+bx =
+b11100 >
+bx A
+b11100 B
+bx E
+b11100 F
+bx I
+b11100 J
+#20000
+0!
+0"
+0#
+0)
+0*
+#30000
+1!
+1"
+b10100100101000 $
+1%
+1)
+b10100100101000 +
+1,
+b10100100101000 7
+bx 9
+b11100 :
+bx =
+b11100 >
+bx A
+b11100 B
+bx E
+b11100 F
+bx I
+b11100 J
+#40000
+0!
+0"
+0)
+#50000
+1!
+1"
+b101100000100010100 $
+1%
+1)
+b101100000100010100 +
+1,
+b101100000100010100 7
+bx000010100100101000 9
+b11100 :
+bx =
+b11100 >
+bx A
+b11100 B
+bx E
+b11100 F
+bx I
+b11100 J
+#60000
+0!
+0"
+0)
+#70000
+1!
+1"
+b101011111111011 $
+1%
+1)
+b101011111111011 +
+1,
+b101011111111011 7
+bx000010100100101000101100000100010100 9
+b11100 :
+bx =
+b11100 >
+bx A
+b11100 B
+bx E
+b11100 F
+bx I
+b11100 J
+#80000
+0!
+0"
+0)
+#90000
+1!
+1"
+b11001001111010111 $
+1%
+1)
+b11001001111010111 +
+1,
+b11001001111010111 7
+bx000010100100101000101100000100010100000101011111111011 9
+b11100 :
+bx =
+b11100 >
+bx A
+b11100 B
+bx E
+b11100 F
+bx I
+b11100 J
+#100000
+0!
+0"
+0)
+#110000
+1!
+1"
+b100111001110100101 $
+1%
+1)
+b100111001110100101 +
+1,
+b100111001110100101 7
+bx000010100100101000101100000100010100000101011111111011011001001111010111 9
+b11100 :
+bx =
+b11100 >
+bx A
+b11100 B
+bx E
+b11100 F
+bx I
+b11100 J
+#120000
+0!
+0"
+0)
+#130000
+1!
+1"
+b100010111001101000 $
+1%
+1)
+b100010111001101000 +
+1,
+b100010111001101000 7
+bx000010100100101000101100000100010100000101011111111011011001001111010111100111001110100101 9
+b11100 :
+bx =
+b11100 >
+bx A
+b11100 B
+bx E
+b11100 F
+bx I
+b11100 J

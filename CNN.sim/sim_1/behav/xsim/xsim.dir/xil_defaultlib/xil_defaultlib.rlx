@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/lewis/Documents/Vivado_Projects/CNN/CNN.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv,1698497954,systemVerilog,,C:/Users/lewis/Documents/Vivado_Projects/CNN/sigmoid.sv,,conv,,uvm,,,,,,
+C:/Users/lewis/Documents/Vivado_Projects/CNN/conv_tb.sv,1711377972,systemVerilog,,,,conv_if;conv_tb,,uvm,,,,,,
+C:/Users/lewis/Documents/Vivado_Projects/CNN/helper.sv,1683101568,systemVerilog,C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv;C:/Users/lewis/Documents/Vivado_Projects/CNN/conv_tb.sv;C:/Users/lewis/Documents/Vivado_Projects/CNN/sigmoid.sv;C:/Users/lewis/Documents/Vivado_Projects/CNN/tapped_shift_reg.sv,C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv,,$unit_helper_sv_148156927;helper,,uvm,,,,,,
+C:/Users/lewis/Documents/Vivado_Projects/CNN/sigmoid.sv,1681977000,systemVerilog,,C:/Users/lewis/Documents/Vivado_Projects/CNN/tapped_shift_reg.sv,,sigmoid,,uvm,,,,,,
+C:/Users/lewis/Documents/Vivado_Projects/CNN/tapped_shift_reg.sv,1682355576,systemVerilog,,C:/Users/lewis/Documents/Vivado_Projects/CNN/conv_tb.sv,,tapped_shift_reg,,uvm,,,,,,
