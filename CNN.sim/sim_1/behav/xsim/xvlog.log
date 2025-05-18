@@ -1,0 +1,21 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lewis/Documents/Vivado_Projects/CNN/helper.sv" into library xil_defaultlib
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [C:/Users/lewis/Documents/Vivado_Projects/CNN/helper.sv:7]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [C:/Users/lewis/Documents/Vivado_Projects/CNN/helper.sv:8]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [C:/Users/lewis/Documents/Vivado_Projects/CNN/helper.sv:15]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv
+WARNING: [VRFC 10-3467] initial value of parameter 'SRC_SIZE' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv:4]
+WARNING: [VRFC 10-3467] initial value of parameter 'KERNEL_SIZE' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv:5]
+WARNING: [VRFC 10-3467] initial value of parameter 'FRAC_BITS' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv:6]
+WARNING: [VRFC 10-3467] initial value of parameter 'INT_BITS' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv:7]
+WARNING: [VRFC 10-3467] initial value of parameter 'ACTIVATION' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv:8]
+WARNING: [VRFC 10-3467] initial value of parameter 'KERNEL' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/conv.sv:9]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lewis/Documents/Vivado_Projects/CNN/sigmoid.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid
+WARNING: [VRFC 10-3467] initial value of parameter 'FRAC_BITS' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/sigmoid.sv:3]
+WARNING: [VRFC 10-3467] initial value of parameter 'INT_BITS' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/sigmoid.sv:4]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lewis/Documents/Vivado_Projects/CNN/tapped_shift_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tapped_shift_reg
+WARNING: [VRFC 10-3467] initial value of parameter 'LEN' is omitted [C:/Users/lewis/Documents/Vivado_Projects/CNN/tapped_shift_reg.sv:3]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/lewis/Documents/Vivado_Projects/CNN/conv_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_tb

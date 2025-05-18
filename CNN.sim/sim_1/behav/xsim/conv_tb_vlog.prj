@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../helper.sv" \
+"../../../../conv.sv" \
+"../../../../sigmoid.sv" \
+"../../../../tapped_shift_reg.sv" \
+"../../../../conv_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

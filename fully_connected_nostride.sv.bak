@@ -1,0 +1,90 @@
+module fully_connected
+    import neural_network_pkg::*;
+#(
+    parameter int                          BITS_N,
+    parameter int                          INPUT_NEURONS,
+    parameter int                          OUTPUT_NEURONS,
+    parameter string                       WEIGHTS_FILE,
+    parameter string                       BIAS_FILE
+) (
+    input  wire                                      clk,
+    input  wire                                      rst,
+    
+    input  wire  [BITS_N-1:0]                        neuron_in,
+    input  wire                                      i_valid,
+    output logic                                     i_ready,
+
+    output logic [OUTPUT_NEURONS-1:0][BITS_N-1:0]    neuron_out,
+    output logic                                     o_valid,
+    input  wire                                      o_ready
+);
+
+    typedef neuron_t logic signed [BITS_N-1:0];
+    typedef neuron_count_t logic [$clog2(INPUT_NEURONS):0];
+
+    localparam N_PIPELINE = 2; 
+    localparam N_CYCLES   = INPUT_NEURONS + N_PIPELINE;
+
+    neuron_t                                neuron_in_q;
+    neuron_t                                out_neurons_c;
+    neuron_t                                out_neurons_q [OUTPUT_NEURONS-1:0];
+    neuron_count_t                          neuron_count, neuron_count_q;
+    int                                     neuron_weights_q [OUTPUT_NEURONS-1:0];
+
+    int weights_rom [INPUT_NEURONS-1:0][OUTPUT_NEURONS-1:0];
+    int bias_rom    [OUTPUT_NEURONS-1:0];
+
+    logic o_valid_d;
+    logic i_handshake, o_handshake;
+
+    assign o_valid_d   = neuron_count >= INPUT_NEURONS && !rst;
+
+    assign i_ready     = !o_valid_d && !rst;
+    assign i_handshake = i_ready && i_valid;
+    assign o_handshake = o_ready && o_valid;
+    
+    initial : init_rom
+    begin
+        $readmemh(WEIGHTS_FILE, weights_rom);
+        $readmemh(BIAS_FILE, bias_rom);
+    end
+
+    always_ff @(posedge clk)
+    begin : flip_flops
+        if (rst)
+        begin
+            out_neurons_q     <= {default: '0};
+            neuron_count      <= '0;
+        end
+        else
+        begin
+            unique if (o_handshake)
+            begin
+                out_neurons_q     <= {default: '0};
+                neuron_count      <= '0;
+            end
+            else if (i_handshake)
+            begin
+                out_neurons_q     <= out_neurons_c;
+                neuron_count      <= neuron_count + 1;
+                neuron_in_q       <= neuron_in;
+                neuron_weights_q  <= neuron_rom[neuron_count];
+            end
+        end
+        o_valid                   <= o_valid_d;
+        neuron_out                <= out_neurons_c;
+    end
+    
+    always_comb
+    begin : neuron_calculation
+        for (int i = 0; i < OUTPUT_NEURONS; i++) 
+        begin
+            out_neurons_c[i] = out_neurons_q[i] + neuron_in_q * neuron_weights_q[i] + bias_rom[i];
+        end
+    end
+ 
+    // SVA
+    handshake_out : assert property @(posedge clk) (o_valid && o_ready) |-> !i_ready ##1 !o_valid;
+    handshake_in  : assert property @(posedge clk) (i_valid && i_ready)[=INPUT_NEURONS] |-> ##N_PIPELINE o_valid;
+
+endmodule

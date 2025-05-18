@@ -1,0 +1,5 @@
+-v c:\Users\lewis\Documents\Vivado_Projects\CNN\neural_network_pkg.sv
++incdir+c:\Users\lewis\Documents\Vivado_Projects\CNN\CNN.srcs\sim_1\new
++incdir+c:\Users\lewis\Documents\Vivado_Projects\CNN
++incdir+c:\Users\lewis\Documents\Vivado_Projects\CNN\CNN.srcs\sim_1\new
++incdir+c:\Users\lewis\Documents\Vivado_Projects\CNN
